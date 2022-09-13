@@ -1,0 +1,15 @@
+<section>
+  <fieldset>
+    <h2>Crea la seccion</h2>
+    <label for="">Nombre seccion: </label>
+    <input type="text" name="nombreSeccion"
+    [value]="nuevaSeccion.nombre_sec" (input)="cambiarSeccion($event)">
+    <p>{{nuevaSeccion.nombre_sec}}</p>
+  </fieldset>
+  <fieldset>
+    <button type="button" role="button" (click)="guardarSeccion()">
+      Registrar Seccion
+    </button>
+  </fieldset>
+</section>
+

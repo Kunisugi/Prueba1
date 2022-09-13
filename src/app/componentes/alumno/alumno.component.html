@@ -1,0 +1,18 @@
+<p *ngIf="alumno.rut_alum; then rutIf; else rutElse"></p>
+<ng-template #rutIf>
+  <p>{{ alumno.rut_alum}}</p>
+</ng-template>
+<ng-template #rutElse>
+  <p>Alumno no tiene rut</p>
+</ng-template>
+
+<p *ngIf="alumno.nombre_alum then nombreIf; else nombreElse"></p>
+<ng-template #nombreIf>{{alumno.nombre_alum | uppercase}}</ng-template>
+<ng-template #nombreElse><p>Alumno sin nombre</p></ng-template>
+<p>{{alumno.apellido_alum | lowercase}}</p>
+<p>{{alumno.edad}}</p>
+
+
+
+
+

@@ -1,0 +1,39 @@
+<app-formulario-seccion (enviarSeccion)="agregarSeccion($event)"
+></app-formulario-seccion>
+<article>
+<section>
+<fieldset>
+<label for="">Rut del Alumno: </label>
+<input type="text" name="rut" [value]="registroNuevo.rut_alum"
+(input)="cambiarRut($event)">
+<p>{{registroNuevo.rut_alum}}</p>
+</fieldset>
+<fieldset>
+<label for="">Nombre del Alumno: </label>
+<input type="text" name="nombre" [value]="registroNuevo.nombre_alum"
+(input)="cambiarNombre($event)">
+<p>{{registroNuevo.nombre_alum}}</p>
+</fieldset>
+<fieldset>
+<label for="">Apellido de Alumno: </label>
+<input type="text" name="apellido" [value]="registroNuevo.apellido_alum"
+(input)="cambiarApellido($event)">
+</fieldset>
+<fieldset>
+  <Label> Edad de Alumno: </Label>
+  <input type="number" name="edad" [value]="registroNuevo.edad"
+  (input)="cambiarEdad($event)">
+</fieldset>
+<fieldset>
+  <label for="">Nombre de seccion: </label>
+  <select>
+    <option *ngFor="let item of seccion" [value]="item.nombre_sec"
+    >{{item.nombre_sec}}</option>
+  </select>
+  <input type="text" (input)="sacarSeccion($event)" style="opacity:100;">
+</fieldset>
+<fieldset>
+  <button type="button" role="button" (click)="registrarAlumno()">Registrar</button>
+</fieldset>
+</section>
+</article>
